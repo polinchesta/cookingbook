@@ -59,35 +59,5 @@ namespace Projectforkyrs.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _403023_avatar_user_woman_female_person_icon {
-            get {
-                object obj = ResourceManager.GetObject("403023_avatar_user_woman_female_person_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _5172962_cyber_internet_lock_locked_padlock_icon {
-            get {
-                object obj = ResourceManager.GetObject("5172962_cyber_internet_lock_locked_padlock_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _5172991_internet_lock_locked_padlock_password_icon {
-            get {
-                object obj = ResourceManager.GetObject("5172991_internet_lock_locked_padlock_password_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

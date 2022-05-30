@@ -55,7 +55,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -68,7 +67,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginBox
             // 
@@ -79,7 +77,6 @@
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(368, 78);
             this.LoginBox.TabIndex = 3;
-            this.LoginBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.LoginBox.Enter += new System.EventHandler(this.LoginBox_Enter);
             this.LoginBox.Leave += new System.EventHandler(this.LoginBox_Leave);
             // 
@@ -94,7 +91,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // enterlogin
             // 
@@ -105,7 +101,7 @@
             this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enterlogin.Font = new System.Drawing.Font("Garamond", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.enterlogin.Location = new System.Drawing.Point(187, 418);
+            this.enterlogin.Location = new System.Drawing.Point(215, 410);
             this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
             this.enterlogin.Name = "enterlogin";
             this.enterlogin.Size = new System.Drawing.Size(235, 49);
@@ -136,7 +132,7 @@
             this.avtorlabel.BackColor = System.Drawing.Color.Transparent;
             this.avtorlabel.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.avtorlabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.avtorlabel.Location = new System.Drawing.Point(211, 488);
+            this.avtorlabel.Location = new System.Drawing.Point(239, 485);
             this.avtorlabel.Name = "avtorlabel";
             this.avtorlabel.Size = new System.Drawing.Size(190, 21);
             this.avtorlabel.TabIndex = 8;
@@ -147,7 +143,6 @@
             // 
             this.maskedpassword.Font = new System.Drawing.Font("Times New Roman", 22.2F);
             this.maskedpassword.Location = new System.Drawing.Point(177, 298);
-            this.maskedpassword.Mask = "00000";
             this.maskedpassword.Name = "maskedpassword";
             this.maskedpassword.Size = new System.Drawing.Size(368, 50);
             this.maskedpassword.TabIndex = 22;
@@ -186,8 +181,8 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label1_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Label1_MouseMove);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

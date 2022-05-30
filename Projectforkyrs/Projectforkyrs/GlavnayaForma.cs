@@ -16,5 +16,19 @@ namespace Projectforkyrs
         {
             InitializeComponent();
         }
+
+        private void авторизацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
+        private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
+        }
     }
 }

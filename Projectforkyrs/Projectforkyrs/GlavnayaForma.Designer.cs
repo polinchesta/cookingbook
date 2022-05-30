@@ -29,25 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnayaForma));
-            this.button1 = new System.Windows.Forms.Button();
             this.textLabel = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.регистрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.авторизацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.enterlogin = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(387, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // textLabel
             // 
@@ -55,10 +42,10 @@
             this.textLabel.BackColor = System.Drawing.Color.Transparent;
             this.textLabel.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textLabel.ForeColor = System.Drawing.Color.Black;
-            this.textLabel.Location = new System.Drawing.Point(240, 130);
+            this.textLabel.Location = new System.Drawing.Point(283, 54);
             this.textLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.textLabel.Name = "textLabel";
-            this.textLabel.Size = new System.Drawing.Size(481, 135);
+            this.textLabel.Size = new System.Drawing.Size(375, 153);
             this.textLabel.TabIndex = 1;
             this.textLabel.Text = "Книга рецептов";
             this.textLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,59 +62,58 @@
             this.Close.Size = new System.Drawing.Size(26, 28);
             this.Close.TabIndex = 8;
             this.Close.Text = "X";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
+            this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
             // 
-            // menuStrip1
+            // enterlogin
             // 
-            this.menuStrip1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.аккаунтToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(9, 9);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(141, 218);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
+            this.enterlogin.AutoSize = true;
+            this.enterlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.enterlogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.enterlogin.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.enterlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enterlogin.Font = new System.Drawing.Font("Garamond", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enterlogin.Location = new System.Drawing.Point(171, 247);
+            this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
+            this.enterlogin.Name = "enterlogin";
+            this.enterlogin.Size = new System.Drawing.Size(235, 50);
+            this.enterlogin.TabIndex = 9;
+            this.enterlogin.Text = "Регистрация";
+            this.enterlogin.UseVisualStyleBackColor = false;
+            this.enterlogin.Click += new System.EventHandler(this.enterlogin_Click);
             // 
-            // аккаунтToolStripMenuItem
+            // button1
             // 
-            this.аккаунтToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.регистрацияToolStripMenuItem,
-            this.авторизацияToolStripMenuItem});
-            this.аккаунтToolStripMenuItem.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold);
-            this.аккаунтToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.аккаунтToolStripMenuItem.Name = "аккаунтToolStripMenuItem";
-            this.аккаунтToolStripMenuItem.Size = new System.Drawing.Size(134, 25);
-            this.аккаунтToolStripMenuItem.Text = "Аккаунт";
-            this.аккаунтToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Garamond", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(55, 345);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 50);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Авторизация";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // регистрацияToolStripMenuItem
+            // label1
             // 
-            this.регистрацияToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
-            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.регистрацияToolStripMenuItem.Text = "Регистрация";
-            // 
-            // авторизацияToolStripMenuItem
-            // 
-            this.авторизацияToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.авторизацияToolStripMenuItem.Name = "авторизацияToolStripMenuItem";
-            this.авторизацияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.авторизацияToolStripMenuItem.Text = "Авторизация";
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold);
-            this.оПрограммеToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(134, 25);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 442);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(680, 90);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Программа разработана в качестве курсового проекта по языку программирования C#.У" +
+    "чащейся группы 03-09-31тп, Лашкевич Полиной";
             // 
             // GlavnayaForma
             // 
@@ -135,30 +121,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(724, 541);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.enterlogin);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.textLabel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GlavnayaForma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GlavnayaForma";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GlavnayaForma_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GlavnayaForma_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label textLabel;
         private System.Windows.Forms.Label Close;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem регистрацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem авторизацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.Button enterlogin;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -104,7 +104,7 @@ namespace Projectforkyrs
 
         private void reglabel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }

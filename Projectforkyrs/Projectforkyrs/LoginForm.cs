@@ -71,14 +71,14 @@ namespace Projectforkyrs
              
         private void reglabel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.Show();
         }
 
         private void avtorlabel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             RegistrationForm regForm = new RegistrationForm();
             regForm.Show();
         }

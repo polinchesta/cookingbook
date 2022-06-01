@@ -77,6 +77,12 @@
     <Compile Include="Windowsposleavrizacii.Designer.cs">
       <DependentUpon>Windowsposleavrizacii.cs</DependentUpon>
     </Compile>
+    <Compile Include="zagruzka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zagruzka.Designer.cs">
+      <DependentUpon>zagruzka.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GlavnayaForma.resx">
       <DependentUpon>GlavnayaForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windowsposleavrizacii.resx">
       <DependentUpon>Windowsposleavrizacii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zagruzka.resx">
+      <DependentUpon>zagruzka.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

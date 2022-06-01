@@ -17,37 +17,25 @@ namespace Projectforkyrs
             InitializeComponent();
         }
 
-        private void авторизацияToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegistrationForm registrationForm = new RegistrationForm();
-            registrationForm.Show();
-        }
-
         private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void enterlogin_Click(object sender, EventArgs e)
+        private void registrationbutton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             RegistrationForm registrationForm = new RegistrationForm();
-            registrationForm.Show();
+            this.Hide();
+            zagruzka zagruzka = new zagruzka(registrationForm);
+            zagruzka.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        private void avtorbutton_Click(object sender, EventArgs e)
+        {   
             LoginForm loginForm = new LoginForm();
-            loginForm.Show();
+            this.Hide();
+            zagruzka zagruzka = new zagruzka(loginForm);
+            zagruzka.Show();
         }
 
         private void Close_MouseLeave(object sender, EventArgs e)

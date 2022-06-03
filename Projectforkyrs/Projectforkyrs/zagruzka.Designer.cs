@@ -38,7 +38,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(134, 257);
+            this.progressBar1.Location = new System.Drawing.Point(162, 254);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(337, 45);
             this.progressBar1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(70, 115);
+            this.label1.Location = new System.Drawing.Point(87, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(459, 111);
             this.label1.TabIndex = 1;
@@ -65,7 +65,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(214, 332);
+            this.label2.Location = new System.Drawing.Point(239, 329);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 30);
             this.label2.TabIndex = 2;

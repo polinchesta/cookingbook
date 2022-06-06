@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projectforkyrs
 {
-    public partial class Windowsposleavrizacii : Form
+    public partial class recept : Form
     {
-        public Windowsposleavrizacii()
+        public recept()
         {
             InitializeComponent();
         }
@@ -32,26 +32,11 @@ namespace Projectforkyrs
             Close.ForeColor = Color.Black;
         }
 
-        Point lastPoint;
-        private void Windowsposleavrizacii_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-
-        private void Windowsposleavrizacii_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
-
         private void enterlogin_Click(object sender, EventArgs e)
         {
             this.Close();
-            recept recept = new recept();
-            recept.Show();
+            Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
+            windowsposleavrizacii.Show();
         }
     }
 }

@@ -65,11 +65,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(239, 329);
+            this.label2.Location = new System.Drawing.Point(42, 340);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 30);
+            this.label2.Size = new System.Drawing.Size(524, 30);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Убери руки!";
+            this.label2.Text = "Уберите руки! А то Вы только ломаете всё";
             // 
             // zagruzka
             // 

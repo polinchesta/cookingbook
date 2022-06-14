@@ -16,7 +16,7 @@ namespace Projectforkyrs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GlavnayaForma());
+            Application.Run(new LoginForm());
         }
     }
 }

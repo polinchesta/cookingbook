@@ -38,5 +38,15 @@ namespace Projectforkyrs
             Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
             windowsposleavrizacii.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0) //первый элемент списка
+            {
+                Zavtrak zavtrak = new Zavtrak();
+                zavtrak.Show();
+                this.Close();
+            }
+        }
     }
 }

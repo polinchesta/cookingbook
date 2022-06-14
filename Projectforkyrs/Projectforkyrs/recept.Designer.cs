@@ -109,13 +109,14 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(171, 196);
+            this.button1.Location = new System.Drawing.Point(174, 210);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(254, 49);
             this.button1.TabIndex = 13;
             this.button1.Text = "Перейти к рецептам";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // recept
             // 
@@ -140,7 +141,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Close;
+        private new System.Windows.Forms.Label Close;
         private System.Windows.Forms.Button enterlogin;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;

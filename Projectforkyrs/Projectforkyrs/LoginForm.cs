@@ -23,7 +23,36 @@ namespace Projectforkyrs
             this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 64);
         }
                
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+               
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void enterlogin_Click(object sender, EventArgs e)
         {
             String loginUser = LoginBox.Text;
@@ -68,17 +97,31 @@ namespace Projectforkyrs
             Close.ForeColor = Color.Black;
         }
 
-             
+        Point lastPoint;
+        private void Label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left) 
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void Label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
         private void reglabel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.Show();
         }
 
         private void avtorlabel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             RegistrationForm regForm = new RegistrationForm();
             regForm.Show();
         }
@@ -98,21 +141,6 @@ namespace Projectforkyrs
             {
                 LoginBox.Text = "Введите логин";
                 LoginBox.ForeColor = Color.Gray;
-            }
-        }
-
-        Point lastPoint;
-        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-
-        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
             }
         }
     }

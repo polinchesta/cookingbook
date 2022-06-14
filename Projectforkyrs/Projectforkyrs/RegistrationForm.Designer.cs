@@ -33,6 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Close = new System.Windows.Forms.Label();
             this.LoginBox = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.reglabel = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.maskedpasswordrepeat = new System.Windows.Forms.MaskedTextBox();
             this.maskedpassword = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Close = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -102,6 +102,23 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Регистрация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            // 
+            // Close
+            // 
+            this.Close.AutoSize = true;
+            this.Close.BackColor = System.Drawing.Color.Transparent;
+            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Close.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Close.Location = new System.Drawing.Point(683, 9);
+            this.Close.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(26, 28);
+            this.Close.TabIndex = 14;
+            this.Close.Text = "X";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Close_MouseEnter);
+            this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
             // 
             // LoginBox
             // 
@@ -168,6 +185,7 @@
             // 
             this.maskedpasswordrepeat.Font = new System.Drawing.Font("Times New Roman", 22.2F);
             this.maskedpasswordrepeat.Location = new System.Drawing.Point(197, 373);
+            this.maskedpasswordrepeat.Mask = "00000";
             this.maskedpasswordrepeat.Name = "maskedpasswordrepeat";
             this.maskedpasswordrepeat.Size = new System.Drawing.Size(368, 50);
             this.maskedpasswordrepeat.TabIndex = 20;
@@ -178,6 +196,7 @@
             // 
             this.maskedpassword.Font = new System.Drawing.Font("Times New Roman", 22.2F);
             this.maskedpassword.Location = new System.Drawing.Point(197, 247);
+            this.maskedpassword.Mask = "00000";
             this.maskedpassword.Name = "maskedpassword";
             this.maskedpassword.Size = new System.Drawing.Size(368, 50);
             this.maskedpassword.TabIndex = 21;
@@ -196,29 +215,12 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Введите пароль, состоящий из цифр";
             // 
-            // Close
-            // 
-            this.Close.AutoSize = true;
-            this.Close.BackColor = System.Drawing.Color.Transparent;
-            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Close.Location = new System.Drawing.Point(683, 9);
-            this.Close.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(26, 28);
-            this.Close.TabIndex = 23;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
-            this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
-            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(722, 572);
-            this.Controls.Add(this.Close);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.maskedpassword);
             this.Controls.Add(this.maskedpasswordrepeat);
@@ -226,6 +228,7 @@
             this.Controls.Add(this.VvodParolya);
             this.Controls.Add(this.reglabel);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Close);
             this.Controls.Add(this.enterregister);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LoginBox);
@@ -235,8 +238,6 @@
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationForm";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegistrationForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegistrationForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -250,6 +251,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Close;
         private System.Windows.Forms.TextBox LoginBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label reglabel;
@@ -258,6 +260,5 @@
         private System.Windows.Forms.MaskedTextBox maskedpasswordrepeat;
         private System.Windows.Forms.MaskedTextBox maskedpassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Close;
     }
 }

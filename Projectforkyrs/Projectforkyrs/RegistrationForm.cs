@@ -25,6 +25,37 @@ namespace Projectforkyrs
             this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 64);
         }
 
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Close_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Close.ForeColor = Color.Red;
+        }
+
+        private void Close_MouseLeave(object sender, EventArgs e)
+        {
+            Close.ForeColor = Color.Black;
+        }
+
+        Point lastPoint;
+        private void Label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+
         private void enterregister_Click(object sender, EventArgs e)
         {
             if (LoginBox.Text == "")
@@ -104,7 +135,7 @@ namespace Projectforkyrs
 
         private void reglabel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
@@ -128,34 +159,5 @@ namespace Projectforkyrs
                 
         }
 
-        private void Close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Close_MouseLeave(object sender, EventArgs e)
-        {
-            Close.ForeColor = Color.Black;
-        }
-
-        private void Close_MouseEnter(object sender, EventArgs e)
-        {
-            Close.ForeColor = Color.Red;
-        }
-
-        Point lastPoint;
-        private void RegistrationForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
-
-        private void RegistrationForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
     }
 }

@@ -37,7 +37,7 @@
             this.Close = new System.Windows.Forms.Label();
             this.avtorlabel = new System.Windows.Forms.Label();
             this.maskedpassword = new System.Windows.Forms.MaskedTextBox();
-            this.VvodParolya = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -48,14 +48,13 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(144, -3);
+            this.label1.Location = new System.Drawing.Point(125, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 131);
+            this.label1.Size = new System.Drawing.Size(473, 89);
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox1
             // 
@@ -68,7 +67,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginBox
             // 
@@ -79,7 +77,6 @@
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(368, 78);
             this.LoginBox.TabIndex = 3;
-            this.LoginBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.LoginBox.Enter += new System.EventHandler(this.LoginBox_Enter);
             this.LoginBox.Leave += new System.EventHandler(this.LoginBox_Leave);
             // 
@@ -94,7 +91,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // enterlogin
             // 
@@ -134,11 +130,11 @@
             // 
             this.avtorlabel.AutoSize = true;
             this.avtorlabel.BackColor = System.Drawing.Color.Transparent;
-            this.avtorlabel.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.avtorlabel.Font = new System.Drawing.Font("Century Schoolbook", 14F, System.Drawing.FontStyle.Bold);
             this.avtorlabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.avtorlabel.Location = new System.Drawing.Point(211, 488);
+            this.avtorlabel.Location = new System.Drawing.Point(172, 471);
             this.avtorlabel.Name = "avtorlabel";
-            this.avtorlabel.Size = new System.Drawing.Size(190, 21);
+            this.avtorlabel.Size = new System.Drawing.Size(255, 30);
             this.avtorlabel.TabIndex = 8;
             this.avtorlabel.Text = "Ещё нет аккаунта?";
             this.avtorlabel.Click += new System.EventHandler(this.avtorlabel_Click);
@@ -147,24 +143,23 @@
             // 
             this.maskedpassword.Font = new System.Drawing.Font("Times New Roman", 22.2F);
             this.maskedpassword.Location = new System.Drawing.Point(177, 298);
-            this.maskedpassword.Mask = "00000";
             this.maskedpassword.Name = "maskedpassword";
             this.maskedpassword.Size = new System.Drawing.Size(368, 50);
             this.maskedpassword.TabIndex = 22;
             this.maskedpassword.UseSystemPasswordChar = true;
             this.maskedpassword.ValidatingType = typeof(int);
             // 
-            // VvodParolya
+            // label2
             // 
-            this.VvodParolya.AutoSize = true;
-            this.VvodParolya.BackColor = System.Drawing.Color.Transparent;
-            this.VvodParolya.Font = new System.Drawing.Font("Century Schoolbook", 9.8F, System.Drawing.FontStyle.Bold);
-            this.VvodParolya.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.VvodParolya.Location = new System.Drawing.Point(173, 274);
-            this.VvodParolya.Name = "VvodParolya";
-            this.VvodParolya.Size = new System.Drawing.Size(338, 21);
-            this.VvodParolya.TabIndex = 23;
-            this.VvodParolya.Text = "Введите пароль, состоящий из цифр";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(172, 266);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 29);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Введите пароль";
             // 
             // LoginForm
             // 
@@ -172,7 +167,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(719, 571);
-            this.Controls.Add(this.VvodParolya);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.maskedpassword);
             this.Controls.Add(this.avtorlabel);
             this.Controls.Add(this.Close);
@@ -186,8 +181,8 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label1_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Label1_MouseMove);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -205,7 +200,7 @@
         private new System.Windows.Forms.Label Close;
         private System.Windows.Forms.Label avtorlabel;
         private System.Windows.Forms.MaskedTextBox maskedpassword;
-        private System.Windows.Forms.Label VvodParolya;
+        private System.Windows.Forms.Label label2;
     }
 }
 

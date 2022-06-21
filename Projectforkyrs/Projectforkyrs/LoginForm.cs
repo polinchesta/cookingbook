@@ -22,60 +22,40 @@ namespace Projectforkyrs
             this.maskedpassword.AutoSize = false;
             this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 64);
         }
-               
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-               
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void enterlogin_Click(object sender, EventArgs e)
         {
-            String loginUser = LoginBox.Text;
-            String passUser = maskedpassword.Text;
-        
+            string loginUser = LoginBox.Text;
+            string passUser = maskedpassword.Text;
+
+
             DB db = new DB();
 
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `customer` WHERE `login` = @uL AND `password` = @uP", db.getConnection());
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `customer` WHERE login = '{loginUser}' AND password = '{passUser}'", db.getConnection());
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
             if (table.Rows.Count > 0)
             {
-                this.Hide();
-                Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
-                windowsposleavrizacii.Show();
+                if (table.Rows[0][1].ToString() == loginUser)
+                {
+                    if (table.Rows[0][2].ToString() == passUser)
+                    {
+                        this.Hide();
+                        Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
+                        windowsposleavrizacii.Show();
+                    }
+                    else
+                        MessageBox.Show("Такого аккаунта нет");
+                }
+                else
+                    MessageBox.Show("Такого аккаунта нет");
             }
             else
                 MessageBox.Show("Такого аккаунта нет");
@@ -98,30 +78,30 @@ namespace Projectforkyrs
         }
 
         Point lastPoint;
-        private void Label1_MouseMove(object sender, MouseEventArgs e)
+        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left) 
+            if (e.Button == MouseButtons.Left)
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
         }
 
-        private void Label1_MouseDown(object sender, MouseEventArgs e)
+        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
 
         private void reglabel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.Show();
         }
 
         private void avtorlabel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             RegistrationForm regForm = new RegistrationForm();
             regForm.Show();
         }

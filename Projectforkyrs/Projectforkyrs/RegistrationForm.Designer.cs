@@ -95,14 +95,15 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(158, -10);
+            this.label1.Location = new System.Drawing.Point(176, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(448, 111);
+            this.label1.Size = new System.Drawing.Size(407, 80);
             this.label1.TabIndex = 8;
             this.label1.Text = "Регистрация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegistrationForm_MouseDown_1);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegistrationForm_MouseMove_1);
             // 
             // Close
             // 
@@ -118,6 +119,7 @@
             this.Close.Text = "X";
             this.Close.Click += new System.EventHandler(this.Close_Click);
             this.Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Close_MouseEnter);
+            this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
             this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
             // 
             // LoginBox
@@ -149,11 +151,11 @@
             this.reglabel.AutoSize = true;
             this.reglabel.BackColor = System.Drawing.Color.Transparent;
             this.reglabel.Cursor = System.Windows.Forms.Cursors.Help;
-            this.reglabel.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold);
+            this.reglabel.Font = new System.Drawing.Font("Century Schoolbook", 14F, System.Drawing.FontStyle.Bold);
             this.reglabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.reglabel.Location = new System.Drawing.Point(281, 530);
+            this.reglabel.Location = new System.Drawing.Point(242, 530);
             this.reglabel.Name = "reglabel";
-            this.reglabel.Size = new System.Drawing.Size(185, 21);
+            this.reglabel.Size = new System.Drawing.Size(250, 30);
             this.reglabel.TabIndex = 17;
             this.reglabel.Text = "Уже есть аккаунт?";
             this.reglabel.Click += new System.EventHandler(this.reglabel_Click);
@@ -173,11 +175,11 @@
             // 
             this.VvodParolyaRepeat.AutoSize = true;
             this.VvodParolyaRepeat.BackColor = System.Drawing.Color.Transparent;
-            this.VvodParolyaRepeat.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold);
+            this.VvodParolyaRepeat.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
             this.VvodParolyaRepeat.ForeColor = System.Drawing.SystemColors.Highlight;
             this.VvodParolyaRepeat.Location = new System.Drawing.Point(193, 348);
             this.VvodParolyaRepeat.Name = "VvodParolyaRepeat";
-            this.VvodParolyaRepeat.Size = new System.Drawing.Size(241, 21);
+            this.VvodParolyaRepeat.Size = new System.Drawing.Size(281, 29);
             this.VvodParolyaRepeat.TabIndex = 19;
             this.VvodParolyaRepeat.Text = "Введите пароль ещё раз";
             // 
@@ -185,7 +187,6 @@
             // 
             this.maskedpasswordrepeat.Font = new System.Drawing.Font("Times New Roman", 22.2F);
             this.maskedpasswordrepeat.Location = new System.Drawing.Point(197, 373);
-            this.maskedpasswordrepeat.Mask = "00000";
             this.maskedpasswordrepeat.Name = "maskedpasswordrepeat";
             this.maskedpasswordrepeat.Size = new System.Drawing.Size(368, 50);
             this.maskedpasswordrepeat.TabIndex = 20;
@@ -196,7 +197,6 @@
             // 
             this.maskedpassword.Font = new System.Drawing.Font("Times New Roman", 22.2F);
             this.maskedpassword.Location = new System.Drawing.Point(197, 247);
-            this.maskedpassword.Mask = "00000";
             this.maskedpassword.Name = "maskedpassword";
             this.maskedpassword.Size = new System.Drawing.Size(368, 50);
             this.maskedpassword.TabIndex = 21;
@@ -207,13 +207,13 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 9.8F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(193, 223);
+            this.label2.Location = new System.Drawing.Point(192, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 21);
+            this.label2.Size = new System.Drawing.Size(187, 29);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Введите пароль, состоящий из цифр";
+            this.label2.Text = "Введите пароль";
             // 
             // RegistrationForm
             // 
@@ -238,6 +238,8 @@
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegistrationForm_MouseDown_1);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegistrationForm_MouseMove_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

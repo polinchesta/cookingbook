@@ -63,13 +63,37 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Obed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obed.Designer.cs">
+      <DependentUpon>Obed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poisk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poisk.Designer.cs">
+      <DependentUpon>Poisk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recept.Designer.cs">
+      <DependentUpon>recept.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video.Designer.cs">
+      <DependentUpon>Video.cs</DependentUpon>
     </Compile>
     <Compile Include="Windowsposleavrizacii.cs">
       <SubType>Form</SubType>
@@ -77,11 +101,29 @@
     <Compile Include="Windowsposleavrizacii.Designer.cs">
       <DependentUpon>Windowsposleavrizacii.cs</DependentUpon>
     </Compile>
+    <Compile Include="zagruzka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zagruzka.Designer.cs">
+      <DependentUpon>zagruzka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zavtrak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zavtrak.Designer.cs">
+      <DependentUpon>Zavtrak.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GlavnayaForma.resx">
       <DependentUpon>GlavnayaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obed.resx">
+      <DependentUpon>Obed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poisk.resx">
+      <DependentUpon>Poisk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,11 +135,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="recept.resx">
+      <DependentUpon>recept.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Video.resx">
+      <DependentUpon>Video.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windowsposleavrizacii.resx">
       <DependentUpon>Windowsposleavrizacii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zagruzka.resx">
+      <DependentUpon>zagruzka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zavtrak.resx">
+      <DependentUpon>Zavtrak.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

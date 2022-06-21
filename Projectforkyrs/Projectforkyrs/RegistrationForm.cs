@@ -30,79 +30,77 @@ namespace Projectforkyrs
             Application.Exit();
         }
 
-        private void Close_MouseEnter(object sender, MouseEventArgs e)
-        {
-            Close.ForeColor = Color.Red;
-        }
-
         private void Close_MouseLeave(object sender, EventArgs e)
         {
             Close.ForeColor = Color.Black;
         }
 
-        Point lastPoint;
-        private void Label1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
+        
 
-        private void label1_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
 
 
         private void enterregister_Click(object sender, EventArgs e)
         {
-            if (LoginBox.Text == "")
+            try
             {
-                MessageBox.Show("Введите логин");
-                return;
+                if (LoginBox.Text == "")
+                {
+                    throw new Exception("Введите пароль из 4 символов");
+                }
+
+                if (maskedpassword.Text == "")
+                {
+                    throw new Exception("Введите пароль из 4 символов");
+                }
+                if (maskedpassword.Text.Length < 4 || maskedpassword.Text.Length > 4)
+                {
+                    throw new Exception("Введите пароль из 4 символов");
+                }
+                if (maskedpasswordrepeat.Text.Length < 4 && maskedpasswordrepeat.Text.Length > 4)
+                {
+                    throw new Exception("Введите пароль из 4 символов");
+                }
+                if (maskedpasswordrepeat.Text == "")
+                {
+                    throw new Exception("Введите пароль из 4 символов");
+                }
+
+                if (maskedpassword.Text != maskedpasswordrepeat.Text)
+                {
+                    throw new Exception("Введите пароль из 4 символов");
+                }
+
+
+                if (isUserExists())
+                    return;
+
+                DB db = new DB();
+                MySqlCommand command = new MySqlCommand("INSERT INTO `customer` (`login`, `password`, `passwordrepeat`) VALUES (@login, @password, @passwordrepeat)", db.getConnection());
+
+
+                command.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginBox.Text;
+                command.Parameters.Add("@password", MySqlDbType.VarChar).Value = maskedpassword.Text;
+                command.Parameters.Add("@passwordrepeat", MySqlDbType.VarChar).Value = maskedpasswordrepeat.Text;
+
+                db.openConnection();
+
+
+                if (command.ExecuteNonQuery() == 1)
+                { 
+                    MessageBox.Show("Аккаунт был создан");
+                    this.Hide();
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                }
+                else
+                    MessageBox.Show("Аккаунт не был создан");
+
+                db.closeConnection();
             }
-
-            if (maskedpassword.Text == "")
-            {
-                MessageBox.Show("Введите пароль");
-                return;
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
-
-            if (maskedpasswordrepeat.Text == "")
-            {
-                MessageBox.Show("Введите пароль ещё раз");
-                return;
-            }
-
-            if (maskedpassword.Text != maskedpasswordrepeat.Text)
-            {
-                MessageBox.Show("Пароли не совпали");
-                return;
-            }
-           
-
-            if (isUserExists())
-                return;
-
-            DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `customer` (`login`, `password`, `passwordrepeat`) VALUES (@login, @password, @passwordrepeat)", db.getConnection());
-
-
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginBox.Text;
-            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = maskedpassword.Text;
-            command.Parameters.Add("@passwordrepeat", MySqlDbType.VarChar).Value = maskedpasswordrepeat.Text;
-
-            db.openConnection();
-
-
-            if (command.ExecuteNonQuery() == 1)
-                MessageBox.Show("Аккаунт был создан");
-            else
-                MessageBox.Show("Аккаунт не был создан");
-
-            db.closeConnection();
 
             
         }
@@ -159,5 +157,25 @@ namespace Projectforkyrs
                 
         }
 
+        private void Close_MouseEnter(object sender, EventArgs e)
+        {
+            Close.ForeColor = Color.Red;
+        }
+
+        Point lastPoint;
+
+        private void RegistrationForm_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void RegistrationForm_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
     }
 }

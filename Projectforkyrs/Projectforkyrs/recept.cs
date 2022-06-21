@@ -47,6 +47,15 @@ namespace Projectforkyrs
                 zavtrak.Show();
                 this.Close();
             }
+
+            if (comboBox1.SelectedIndex == 1) //первый элемент списка
+            {
+                Obed obed = new Obed();
+                obed.Show();
+                this.Close();
+            }
         }
+
+        
     }
 }

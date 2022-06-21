@@ -28,14 +28,7 @@ namespace Projectforkyrs
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {
-            //this.progressBar1.Increment(1);
-
-            //if (progressBar1.Value == progressBar1.Maximum)
-            //{
-
-            //}
-          
+        {              
 
             if (progressBar1.Value >= 100)
             {

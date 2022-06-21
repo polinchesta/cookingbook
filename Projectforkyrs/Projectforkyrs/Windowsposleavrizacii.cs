@@ -21,5 +21,29 @@ namespace Projectforkyrs
         {
             Application.Exit();
         }
+
+        private void enterlogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            recept recept = new recept();
+            recept.Show();
+        }
+
+        private void Close_MouseEnter(object sender, EventArgs e)
+        {
+            Close.ForeColor = Color.Red;
+        }
+
+        private void Close_MouseLeave(object sender, EventArgs e)
+        {
+            Close.ForeColor = Color.Black;
+        }
+
+        private void buttonPoisk_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Poisk poisk = new Poisk();
+            poisk.Show();
+        }
     }
 }

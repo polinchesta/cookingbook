@@ -34,10 +34,7 @@ namespace Projectforkyrs
         {
             Close.ForeColor = Color.Black;
         }
-
-        
-
-
+                
 
         private void enterregister_Click(object sender, EventArgs e)
         {
@@ -75,7 +72,7 @@ namespace Projectforkyrs
                     return;
 
                 DB db = new DB();
-                MySqlCommand command = new MySqlCommand("INSERT INTO `customer` (`login`, `password`, `passwordrepeat`) VALUES (@login, @password, @passwordrepeat)", db.getConnection());
+                MySqlCommand command = new MySqlCommand("INSERT INTO `customers` (`login`, `password`, `passwordrepeat`) VALUES (@login, @password, @passwordrepeat)", db.getConnection());
 
 
                 command.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginBox.Text;
@@ -102,7 +99,6 @@ namespace Projectforkyrs
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
 
-            
         }
 
         public Boolean isUserExists()
@@ -114,7 +110,7 @@ namespace Projectforkyrs
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `customer` WHERE `login` = @uL", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `customers` WHERE `login` = @uL", db.getConnection());
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = LoginBox.Text;
             
 

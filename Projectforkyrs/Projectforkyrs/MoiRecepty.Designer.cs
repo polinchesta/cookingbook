@@ -1,6 +1,6 @@
 ﻿namespace Projectforkyrs
 {
-    partial class Video
+    partial class MoiRecepty
     {
         /// <summary>
         /// Required designer variable.

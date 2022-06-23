@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projectforkyrs
 {
-    public partial class Video : Form
+    public partial class MoiRecepty : Form
     {
-        public Video()
+        public MoiRecepty()
         {
             InitializeComponent();
         }

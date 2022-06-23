@@ -31,10 +31,10 @@ namespace Projectforkyrs
 
             if (comboBoxVybor.SelectedIndex == 0)
             {
-                DB_zavtrak dB_Zavtrak = new DB_zavtrak();
-                dB_Zavtrak.openConnection();
+                DB dB = new DB();
+                dB.openConnection();
 
-                MySqlCommand command = new MySqlCommand($"SELECT * FROM `recept_zavtrak` WHERE `recept_zavtrak`.`nazvanie` = '{name}'", dB_Zavtrak.getConnection());
+                MySqlCommand command = new MySqlCommand($"SELECT * FROM `recept_zavtrak` WHERE `recept_zavtrak`.`nazvanie` = '{name}'", dB.getConnection());
 
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -62,11 +62,11 @@ namespace Projectforkyrs
                     recept.Visible = true;
                     energ.Visible = true;
                 }
-                dB_Zavtrak.closeConnection();
+                dB.closeConnection();
             }
             else if (comboBoxVybor.SelectedIndex == 1)
             {
-                DB_obed dB_Obed = new DB_obed();
+                DB dB_Obed = new DB();
 
                 dB_Obed.openConnection();
 

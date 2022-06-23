@@ -83,7 +83,7 @@ namespace Projectforkyrs
             path = @"C:\Users\Полина\Desktop\cookingbook-main\Projectforkyrs\Projectforkyrs\Resources\";
             string item = path + name + ".jpg";
             PictureBoxImage.Image = Image.FromFile(item);
-            DB_zavtrak db = new DB_zavtrak();
+            DB db = new DB();
 
             db.openConnection();
 

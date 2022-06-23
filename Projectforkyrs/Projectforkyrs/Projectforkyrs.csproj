@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BelarusKuxnya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BelarusKuxnya.Designer.cs">
+      <DependentUpon>BelarusKuxnya.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="GlavnayaForma.cs">
       <SubType>Form</SubType>
@@ -89,11 +95,11 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Video.cs">
+    <Compile Include="MoiRecepty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Video.Designer.cs">
-      <DependentUpon>Video.cs</DependentUpon>
+    <Compile Include="MoiRecepty.Designer.cs">
+      <DependentUpon>MoiRecepty.cs</DependentUpon>
     </Compile>
     <Compile Include="Windowsposleavrizacii.cs">
       <SubType>Form</SubType>
@@ -113,6 +119,9 @@
     <Compile Include="Zavtrak.Designer.cs">
       <DependentUpon>Zavtrak.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BelarusKuxnya.resx">
+      <DependentUpon>BelarusKuxnya.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlavnayaForma.resx">
       <DependentUpon>GlavnayaForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,8 +150,8 @@
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Video.resx">
-      <DependentUpon>Video.cs</DependentUpon>
+    <EmbeddedResource Include="MoiRecepty.resx">
+      <DependentUpon>MoiRecepty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windowsposleavrizacii.resx">
       <DependentUpon>Windowsposleavrizacii.cs</DependentUpon>

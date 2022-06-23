@@ -45,5 +45,12 @@ namespace Projectforkyrs
             Poisk poisk = new Poisk();
             poisk.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BelarusKuxnya belarusKuxnya = new BelarusKuxnya();
+            belarusKuxnya.Show();
+        }
     }
 }

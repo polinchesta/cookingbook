@@ -36,7 +36,7 @@ namespace Projectforkyrs
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM `customer` WHERE login = '{loginUser}' AND password = '{passUser}'", db.getConnection());
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `customers` WHERE login = '{loginUser}' AND password = '{passUser}'", db.getConnection());
 
             adapter.SelectCommand = command;
             adapter.Fill(table);

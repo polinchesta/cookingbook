@@ -41,7 +41,7 @@
             this.obed1 = new System.Windows.Forms.Label();
             this.obed_sostav1 = new System.Windows.Forms.Label();
             this.obed_recept1 = new System.Windows.Forms.Label();
-            this.borsh = new System.Windows.Forms.PictureBox();
+            this.PictureBoxImage = new System.Windows.Forms.PictureBox();
             this.ingred = new System.Windows.Forms.Label();
             this.recept = new System.Windows.Forms.Label();
             this.uglevody_n = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.enterlogin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.borsh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,9 +105,9 @@
             this.bludo5.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
             this.bludo5.Location = new System.Drawing.Point(3, 368);
             this.bludo5.Name = "bludo5";
-            this.bludo5.Size = new System.Drawing.Size(148, 60);
+            this.bludo5.Size = new System.Drawing.Size(155, 60);
             this.bludo5.TabIndex = 18;
-            this.bludo5.Text = "Картофель запеченный ";
+            this.bludo5.Text = "Картофель запеченный";
             this.bludo5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bludo5.Click += new System.EventHandler(this.bludo5_Click);
             // 
@@ -143,7 +143,7 @@
             this.bludo2.Name = "bludo2";
             this.bludo2.Size = new System.Drawing.Size(158, 95);
             this.bludo2.TabIndex = 15;
-            this.bludo2.Text = "Суп \"Плавленый сыр\"";
+            this.bludo2.Text = "Суп Плавленый сыр";
             this.bludo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bludo2.Click += new System.EventHandler(this.bludo2_Click);
             // 
@@ -207,17 +207,17 @@
             this.obed_recept1.Text = "obed_recept1";
             this.obed_recept1.Visible = false;
             // 
-            // borsh
+            // PictureBoxImage
             // 
-            this.borsh.BackColor = System.Drawing.Color.Transparent;
-            this.borsh.Image = ((System.Drawing.Image)(resources.GetObject("borsh.Image")));
-            this.borsh.Location = new System.Drawing.Point(170, 48);
-            this.borsh.Name = "borsh";
-            this.borsh.Size = new System.Drawing.Size(295, 200);
-            this.borsh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.borsh.TabIndex = 5;
-            this.borsh.TabStop = false;
-            this.borsh.Visible = false;
+            this.PictureBoxImage.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxImage.Image")));
+            this.PictureBoxImage.Location = new System.Drawing.Point(170, 48);
+            this.PictureBoxImage.Name = "PictureBoxImage";
+            this.PictureBoxImage.Size = new System.Drawing.Size(295, 200);
+            this.PictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxImage.TabIndex = 5;
+            this.PictureBoxImage.TabStop = false;
+            this.PictureBoxImage.Visible = false;
             // 
             // ingred
             // 
@@ -417,7 +417,7 @@
             this.Controls.Add(this.energ);
             this.Controls.Add(this.recept);
             this.Controls.Add(this.ingred);
-            this.Controls.Add(this.borsh);
+            this.Controls.Add(this.PictureBoxImage);
             this.Controls.Add(this.obed_recept1);
             this.Controls.Add(this.obed_sostav1);
             this.Controls.Add(this.obed1);
@@ -432,7 +432,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Obed_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.borsh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,7 +445,7 @@
         private System.Windows.Forms.Label obed1;
         private System.Windows.Forms.Label obed_sostav1;
         private System.Windows.Forms.Label obed_recept1;
-        private System.Windows.Forms.PictureBox borsh;
+        private System.Windows.Forms.PictureBox PictureBoxImage;
         private System.Windows.Forms.Label ingred;
         private System.Windows.Forms.Label recept;
         private System.Windows.Forms.Label label1;

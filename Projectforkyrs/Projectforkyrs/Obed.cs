@@ -14,6 +14,7 @@ namespace Projectforkyrs
 {
     public partial class Obed : Form
     {
+        private string path = string.Empty;
         public Obed()
         {
             InitializeComponent();
@@ -41,8 +42,10 @@ namespace Projectforkyrs
 
         private void GetName(string name)
         {
-
-            DB_obed db = new DB_obed();
+            path = @"C:\Users\Полина\Desktop\cookingbook-main\Projectforkyrs\Projectforkyrs\Resources\";
+            string item = path + name + ".jpg";
+            PictureBoxImage.Image = Image.FromFile(item);
+            DB db = new DB();
            
 
             db.openConnection();
@@ -69,7 +72,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;
@@ -88,7 +91,7 @@ namespace Projectforkyrs
             obed1.Visible = false;
             obed_sostav1.Visible = false;
             obed_recept1.Visible = false;
-            borsh.Visible = false;
+            PictureBoxImage.Visible = false;
             ingred.Visible = false;
             energ.Visible = false;
             kalor.Visible = false;
@@ -121,7 +124,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;
@@ -140,7 +143,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;
@@ -159,7 +162,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;
@@ -178,7 +181,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;
@@ -197,7 +200,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;
@@ -216,7 +219,7 @@ namespace Projectforkyrs
             obed1.Visible = true;
             obed_sostav1.Visible = true;
             obed_recept1.Visible = true;
-            borsh.Visible = true;
+            PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
             kalor.Visible = true;

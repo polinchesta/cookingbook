@@ -64,7 +64,7 @@ namespace Projectforkyrs
 
                 if (maskedpassword.Text != maskedpasswordrepeat.Text)
                 {
-                    throw new Exception("Введите пароль из 4 символов");
+                    throw new Exception("Пароли не совпали, соберитесь и попробуйте ещё раз");
                 }
 
 

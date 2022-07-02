@@ -55,8 +55,24 @@
             this.uglevody_n = new System.Windows.Forms.Label();
             this.enterlogin = new System.Windows.Forms.Button();
             this.buttonProsmotr = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // zavtrak1
@@ -99,10 +115,10 @@
             // 
             this.bludo1.AutoSize = true;
             this.bludo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bludo1.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
-            this.bludo1.Location = new System.Drawing.Point(19, 95);
+            this.bludo1.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
+            this.bludo1.Location = new System.Drawing.Point(42, 99);
             this.bludo1.Name = "bludo1";
-            this.bludo1.Size = new System.Drawing.Size(128, 30);
+            this.bludo1.Size = new System.Drawing.Size(114, 27);
             this.bludo1.TabIndex = 0;
             this.bludo1.Text = "Сырники";
             this.bludo1.Click += new System.EventHandler(this.bludo1_Click);
@@ -111,10 +127,10 @@
             // 
             this.bludo2.AutoSize = true;
             this.bludo2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bludo2.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
-            this.bludo2.Location = new System.Drawing.Point(39, 136);
+            this.bludo2.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
+            this.bludo2.Location = new System.Drawing.Point(76, 143);
             this.bludo2.Name = "bludo2";
-            this.bludo2.Size = new System.Drawing.Size(88, 30);
+            this.bludo2.Size = new System.Drawing.Size(79, 27);
             this.bludo2.TabIndex = 1;
             this.bludo2.Text = "Омлет";
             this.bludo2.Click += new System.EventHandler(this.bludo2_Click);
@@ -122,6 +138,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.bludo7);
             this.panel1.Controls.Add(this.bludo6);
             this.panel1.Controls.Add(this.bludo5);
@@ -139,9 +162,9 @@
             // 
             this.bludo7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo7.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo7.Location = new System.Drawing.Point(9, 483);
+            this.bludo7.Location = new System.Drawing.Point(36, 516);
             this.bludo7.Name = "bludo7";
-            this.bludo7.Size = new System.Drawing.Size(147, 51);
+            this.bludo7.Size = new System.Drawing.Size(119, 51);
             this.bludo7.TabIndex = 7;
             this.bludo7.Text = "Драники";
             this.bludo7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,24 +174,24 @@
             // 
             this.bludo6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo6.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo6.Location = new System.Drawing.Point(8, 414);
+            this.bludo6.Location = new System.Drawing.Point(33, 436);
             this.bludo6.Name = "bludo6";
-            this.bludo6.Size = new System.Drawing.Size(147, 81);
+            this.bludo6.Size = new System.Drawing.Size(122, 81);
             this.bludo6.TabIndex = 6;
             this.bludo6.Text = "Ленивые вареники";
-            this.bludo6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bludo6.Click += new System.EventHandler(this.bludo6_Click);
             // 
             // bludo5
             // 
             this.bludo5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo5.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo5.Location = new System.Drawing.Point(9, 343);
+            this.bludo5.Location = new System.Drawing.Point(12, 362);
             this.bludo5.Name = "bludo5";
             this.bludo5.Size = new System.Drawing.Size(147, 81);
             this.bludo5.TabIndex = 5;
             this.bludo5.Text = "Овсянка в банке";
-            this.bludo5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bludo5.Click += new System.EventHandler(this.bludo5_Click);
             // 
             // label1
@@ -186,25 +209,25 @@
             // bludo4
             // 
             this.bludo4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bludo4.Font = new System.Drawing.Font("Garamond", 13F, System.Drawing.FontStyle.Bold);
-            this.bludo4.Location = new System.Drawing.Point(8, 274);
+            this.bludo4.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
+            this.bludo4.Location = new System.Drawing.Point(20, 288);
             this.bludo4.Name = "bludo4";
-            this.bludo4.Size = new System.Drawing.Size(150, 81);
+            this.bludo4.Size = new System.Drawing.Size(139, 79);
             this.bludo4.TabIndex = 3;
             this.bludo4.Text = "Творожная запеканка";
-            this.bludo4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bludo4.Click += new System.EventHandler(this.bludo4_Click);
             // 
             // bludo3
             // 
             this.bludo3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bludo3.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.bludo3.Location = new System.Drawing.Point(11, 176);
+            this.bludo3.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
+            this.bludo3.Location = new System.Drawing.Point(19, 185);
             this.bludo3.Name = "bludo3";
-            this.bludo3.Size = new System.Drawing.Size(145, 98);
+            this.bludo3.Size = new System.Drawing.Size(136, 98);
             this.bludo3.TabIndex = 2;
             this.bludo3.Text = "Творожно-яблочное суфле";
-            this.bludo3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bludo3.Click += new System.EventHandler(this.bludo3_Click);
             // 
             // zavtrak_recept1
@@ -398,12 +421,114 @@
             this.buttonProsmotr.UseVisualStyleBackColor = false;
             this.buttonProsmotr.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Garamond", 17F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(158, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(744, 379);
+            this.label2.TabIndex = 38;
+            this.label2.Text = resources.GetString("label2.Text");
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Garamond", 17F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(228, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(575, 33);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Легенда о происхождении слова \"завтрак\"";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 231);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 98);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(13, 333);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(13, 397);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(13, 473);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(13, 530);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
+            // 
             // Zavtrak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(930, 745);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonProsmotr);
             this.Controls.Add(this.enterlogin);
             this.Controls.Add(this.uglevody_n);
@@ -423,6 +548,7 @@
             this.Controls.Add(this.zavtrak1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Zavtrak";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zavtrak";
@@ -432,6 +558,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,5 +597,14 @@
         private System.Windows.Forms.Label uglevody_n;
         private System.Windows.Forms.Button enterlogin;
         private System.Windows.Forms.Button buttonProsmotr;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

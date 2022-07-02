@@ -256,7 +256,7 @@ namespace Projectforkyrs
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void enterlogin_Click(object sender, EventArgs e)
+        private void nazad_Click(object sender, EventArgs e)
         {
             this.Hide();
             recept recept = new recept();

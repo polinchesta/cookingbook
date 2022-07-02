@@ -42,7 +42,7 @@
             this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Close.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Close.Location = new System.Drawing.Point(531, 9);
+            this.Close.Location = new System.Drawing.Point(535, 9);
             this.Close.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(26, 28);
@@ -60,8 +60,8 @@
             this.enterlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enterlogin.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.enterlogin.Location = new System.Drawing.Point(426, 347);
+            this.enterlogin.Font = new System.Drawing.Font("Garamond", 17F, System.Drawing.FontStyle.Bold);
+            this.enterlogin.Location = new System.Drawing.Point(426, 298);
             this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
             this.enterlogin.Name = "enterlogin";
             this.enterlogin.Size = new System.Drawing.Size(131, 41);
@@ -72,18 +72,19 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Завтрак",
             "Обед ",
             "Ужин",
             "Ланч",
-            "Полдник",
-            "Закуска"});
-            this.comboBox1.Location = new System.Drawing.Point(127, 134);
+            "Полдник"});
+            this.comboBox1.Location = new System.Drawing.Point(96, 126);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(332, 37);
+            this.comboBox1.Size = new System.Drawing.Size(392, 45);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.Text = "Выберите приём пищи";
             // 
@@ -91,10 +92,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(80, 34);
+            this.label1.Font = new System.Drawing.Font("Garamond", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(64, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 65);
+            this.label1.Size = new System.Drawing.Size(449, 97);
             this.label1.TabIndex = 12;
             this.label1.Text = "Какой именно приём пищи интересует Вас?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,11 +109,11 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(174, 210);
+            this.button1.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(111, 208);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 49);
+            this.button1.Size = new System.Drawing.Size(343, 50);
             this.button1.TabIndex = 13;
             this.button1.Text = "Перейти к рецептам";
             this.button1.UseVisualStyleBackColor = false;
@@ -123,7 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(574, 401);
+            this.ClientSize = new System.Drawing.Size(574, 352);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -131,9 +132,12 @@
             this.Controls.Add(this.Close);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "recept";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "recept";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.recept_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.recept_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

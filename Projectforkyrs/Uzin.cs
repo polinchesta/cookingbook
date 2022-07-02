@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -269,6 +270,12 @@ namespace Projectforkyrs
         private void Close_MouseLeave(object sender, EventArgs e)
         {
             Close.ForeColor = Color.Black;
+        }
+
+        private void buttonProsmotr_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Users\Полина\Desktop\cookingbook-main\Projectforkyrs\Projectforkyrs\Resources\Video\" + uzin1.Text + ".mp4";
+            Process.Start(path);
         }
     }
 }

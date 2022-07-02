@@ -61,6 +61,20 @@ namespace Projectforkyrs
                 uzin.Show();
                 this.Close();
             }
+
+            if (comboBox1.SelectedIndex == 3) //первый элемент списка
+            {
+                Lanch lanch = new Lanch();
+                lanch.Show();
+                this.Close();
+            }
+
+            if (comboBox1.SelectedIndex == 4) //первый элемент списка
+            {
+                Poldnik poldnik = new Poldnik();
+                poldnik.Show();
+                this.Close();
+            }
         }
 
         Point lastPoint;

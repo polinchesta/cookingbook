@@ -9,7 +9,7 @@ namespace Projectforkyrs
 {
     internal class DB
     {
-        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=my_recept; SSL Mode = None");
+        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=J_$c#@/f_d3SD(*;database=my_recept; SSL Mode = None");
 
         public void openConnection()
         {

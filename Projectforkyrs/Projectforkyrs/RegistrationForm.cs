@@ -20,9 +20,9 @@ namespace Projectforkyrs
             LoginBox.Text = "Введите логин";
             LoginBox.ForeColor = Color.Gray;
             this.maskedpasswordrepeat.AutoSize = false;
-            this.maskedpasswordrepeat.Size = new Size(this.maskedpassword.Size.Width, 64);
+            this.maskedpasswordrepeat.Size = new Size(this.maskedpassword.Size.Width, 65);
             this.maskedpassword.AutoSize = false;
-            this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 64);
+            this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 65);
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Projectforkyrs
             {
                 if (LoginBox.Text == "")
                 {
-                    throw new Exception("Введите пароль из 4 символов");
+                    throw new Exception("Введите логин");
                 }
 
                 if (maskedpassword.Text == "")
@@ -64,7 +64,7 @@ namespace Projectforkyrs
 
                 if (maskedpassword.Text != maskedpasswordrepeat.Text)
                 {
-                    throw new Exception("Введите пароль из 4 символов");
+                    throw new Exception("Пароли не совпали, соберитесь и попробуйте ещё раз");
                 }
 
 

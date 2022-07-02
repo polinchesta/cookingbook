@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using Projectforkyrs.Exceptions;
+using Projectforkyrs.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,31 +37,42 @@ namespace Projectforkyrs
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM `customers` WHERE login = '{loginUser}' AND password = '{passUser}'", db.getConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
+            User currentUser = default;
+            try
             {
-                if (table.Rows[0][1].ToString() == loginUser)
+                using (var connection = db.getConnection())
                 {
-                    if (table.Rows[0][2].ToString() == passUser)
+                    connection.Open();
+                    using (MySqlCommand command = new MySqlCommand($"SELECT * FROM `customers` WHERE login = '{loginUser}' AND password = '{passUser}'", connection))
                     {
-                        this.Hide();
-                        Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
-                        windowsposleavrizacii.Show();
-                    }
-                    else
-                        MessageBox.Show("Такого аккаунта нет");
-                }
-                else
-                    MessageBox.Show("Такого аккаунта нет");
-            }
-            else
-                MessageBox.Show("Такого аккаунта нет");
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (!reader.HasRows)
+                            {
+                                throw new UserException("Такого пользователя не существует");
+                            }
+                            while (reader.Read())
+                            {
+                                currentUser = new User()
+                                {
+                                    Id = reader.GetInt32("id"),
+                                };
+                            }
+                        }
 
+                    }
+                }
+                this.Hide();
+                Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii(currentUser);
+                windowsposleavrizacii.Show();
+            }
+            catch(UserException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+               
+                      
+                   
         }
 
         private void Close_Click(object sender, EventArgs e)

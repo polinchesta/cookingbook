@@ -53,8 +53,10 @@
             this.uglevody = new System.Windows.Forms.Label();
             this.energ = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Label();
-            this.enterlogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nazad = new System.Windows.Forms.Button();
+            this.buttonProsmotr = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +93,7 @@
             // 
             this.bludo6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo6.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo6.Location = new System.Drawing.Point(0, 428);
+            this.bludo6.Location = new System.Drawing.Point(6, 428);
             this.bludo6.Name = "bludo6";
             this.bludo6.Size = new System.Drawing.Size(148, 60);
             this.bludo6.TabIndex = 19;
@@ -103,7 +105,7 @@
             // 
             this.bludo5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo5.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo5.Location = new System.Drawing.Point(3, 368);
+            this.bludo5.Location = new System.Drawing.Point(6, 368);
             this.bludo5.Name = "bludo5";
             this.bludo5.Size = new System.Drawing.Size(155, 60);
             this.bludo5.TabIndex = 18;
@@ -115,7 +117,7 @@
             // 
             this.bludo4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo4.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo4.Location = new System.Drawing.Point(0, 295);
+            this.bludo4.Location = new System.Drawing.Point(9, 294);
             this.bludo4.Name = "bludo4";
             this.bludo4.Size = new System.Drawing.Size(148, 60);
             this.bludo4.TabIndex = 17;
@@ -362,41 +364,63 @@
             this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
             this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
             // 
-            // enterlogin
+            // nazad
             // 
-            this.enterlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.enterlogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.enterlogin.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.enterlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enterlogin.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.enterlogin.Location = new System.Drawing.Point(775, 794);
-            this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
-            this.enterlogin.Name = "enterlogin";
-            this.enterlogin.Size = new System.Drawing.Size(131, 41);
-            this.enterlogin.TabIndex = 35;
-            this.enterlogin.Text = "Назад";
-            this.enterlogin.UseVisualStyleBackColor = false;
-            this.enterlogin.Click += new System.EventHandler(this.enterlogin_Click);
+            this.nazad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nazad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nazad.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.nazad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nazad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.nazad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nazad.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.nazad.Location = new System.Drawing.Point(775, 794);
+            this.nazad.Margin = new System.Windows.Forms.Padding(4);
+            this.nazad.Name = "nazad";
+            this.nazad.Size = new System.Drawing.Size(131, 41);
+            this.nazad.TabIndex = 35;
+            this.nazad.Text = "Назад";
+            this.nazad.UseVisualStyleBackColor = false;
+            this.nazad.Click += new System.EventHandler(this.nazad_Click);
             // 
-            // button1
+            // buttonProsmotr
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(343, 794);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(342, 41);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Просмотр видео-рецепта";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonProsmotr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonProsmotr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonProsmotr.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonProsmotr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonProsmotr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.buttonProsmotr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProsmotr.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonProsmotr.Location = new System.Drawing.Point(343, 794);
+            this.buttonProsmotr.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonProsmotr.Name = "buttonProsmotr";
+            this.buttonProsmotr.Size = new System.Drawing.Size(342, 41);
+            this.buttonProsmotr.TabIndex = 36;
+            this.buttonProsmotr.Text = "Просмотр видео-рецепта";
+            this.buttonProsmotr.UseVisualStyleBackColor = false;
+            this.buttonProsmotr.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Garamond", 17F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(230, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(542, 33);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Легенда о происхождении слова \"Обед\"";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Garamond", 17F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(170, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(727, 456);
+            this.label2.TabIndex = 41;
+            this.label2.Text = resources.GetString("label2.Text");
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Obed
             // 
@@ -404,8 +428,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(929, 862);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.enterlogin);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.buttonProsmotr);
+            this.Controls.Add(this.nazad);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.uglevody_n);
             this.Controls.Add(this.ziry_n);
@@ -424,6 +450,7 @@
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Obed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Obed";
@@ -464,7 +491,9 @@
         private System.Windows.Forms.Label bludo7;
         private System.Windows.Forms.Label bludo6;
         private System.Windows.Forms.Label bludo5;
-        private System.Windows.Forms.Button enterlogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button nazad;
+        private System.Windows.Forms.Button buttonProsmotr;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

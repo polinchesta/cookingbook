@@ -53,7 +53,7 @@
             this.uglevody = new System.Windows.Forms.Label();
             this.energ = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Label();
-            this.enterlogin = new System.Windows.Forms.Button();
+            this.nazad = new System.Windows.Forms.Button();
             this.buttonProsmotr = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
@@ -362,23 +362,23 @@
             this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
             this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
             // 
-            // enterlogin
+            // nazad
             // 
-            this.enterlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.enterlogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.enterlogin.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.enterlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enterlogin.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.enterlogin.Location = new System.Drawing.Point(775, 794);
-            this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
-            this.enterlogin.Name = "enterlogin";
-            this.enterlogin.Size = new System.Drawing.Size(131, 41);
-            this.enterlogin.TabIndex = 35;
-            this.enterlogin.Text = "Назад";
-            this.enterlogin.UseVisualStyleBackColor = false;
-            this.enterlogin.Click += new System.EventHandler(this.enterlogin_Click);
+            this.nazad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nazad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nazad.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.nazad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nazad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.nazad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nazad.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.nazad.Location = new System.Drawing.Point(775, 794);
+            this.nazad.Margin = new System.Windows.Forms.Padding(4);
+            this.nazad.Name = "nazad";
+            this.nazad.Size = new System.Drawing.Size(131, 41);
+            this.nazad.TabIndex = 35;
+            this.nazad.Text = "Назад";
+            this.nazad.UseVisualStyleBackColor = false;
+            this.nazad.Click += new System.EventHandler(this.nazad_Click);
             // 
             // buttonProsmotr
             // 
@@ -405,7 +405,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(929, 862);
             this.Controls.Add(this.buttonProsmotr);
-            this.Controls.Add(this.enterlogin);
+            this.Controls.Add(this.nazad);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.uglevody_n);
             this.Controls.Add(this.ziry_n);
@@ -424,6 +424,7 @@
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Obed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Obed";
@@ -464,7 +465,7 @@
         private System.Windows.Forms.Label bludo7;
         private System.Windows.Forms.Label bludo6;
         private System.Windows.Forms.Label bludo5;
-        private System.Windows.Forms.Button enterlogin;
+        private System.Windows.Forms.Button nazad;
         private System.Windows.Forms.Button buttonProsmotr;
     }
 }

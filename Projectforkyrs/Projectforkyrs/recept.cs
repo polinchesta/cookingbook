@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projectforkyrs.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,17 @@ namespace Projectforkyrs
 {
     public partial class recept : Form
     {
+        private User _currentUser;
         public recept()
         {
             InitializeComponent();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        public recept(User currentUser) : this()
+        {
+            _currentUser = currentUser;
+        }
         private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -35,27 +42,65 @@ namespace Projectforkyrs
         private void enterlogin_Click(object sender, EventArgs e)
         {
             this.Close();
-            Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
+            Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii(_currentUser);
             windowsposleavrizacii.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Вы ничего не выбрали!");
+            }
             if (comboBox1.SelectedIndex == 0) //первый элемент списка
             {
-                Zavtrak zavtrak = new Zavtrak();
+                Zavtrak zavtrak = new Zavtrak(_currentUser);
                 zavtrak.Show();
                 this.Close();
             }
 
             if (comboBox1.SelectedIndex == 1) //первый элемент списка
             {
-                Obed obed = new Obed();
+                Obed obed = new Obed(_currentUser);
                 obed.Show();
+                this.Close();
+            }
+
+            if (comboBox1.SelectedIndex == 2) //первый элемент списка
+            {
+                Uzin uzin = new Uzin(_currentUser);
+                uzin.Show();
+                this.Close();
+            }
+
+            if (comboBox1.SelectedIndex == 3) //первый элемент списка
+            {
+                Lanch lanch = new Lanch(_currentUser);
+                lanch.Show();
+                this.Close();
+            }
+
+            if (comboBox1.SelectedIndex == 4) //первый элемент списка
+            {
+                Poldnik poldnik = new Poldnik(_currentUser);
+                poldnik.Show();
                 this.Close();
             }
         }
 
-        
+        Point lastPoint;
+        private void recept_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void recept_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
     }
 }

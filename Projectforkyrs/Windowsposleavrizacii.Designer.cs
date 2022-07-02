@@ -34,6 +34,8 @@
             this.enterlogin = new System.Windows.Forms.Button();
             this.buttonPoisk = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Close
@@ -94,7 +96,7 @@
             this.buttonPoisk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.buttonPoisk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPoisk.Font = new System.Drawing.Font("Garamond", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPoisk.Location = new System.Drawing.Point(217, 155);
+            this.buttonPoisk.Location = new System.Drawing.Point(217, 169);
             this.buttonPoisk.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPoisk.Name = "buttonPoisk";
             this.buttonPoisk.Size = new System.Drawing.Size(235, 49);
@@ -112,14 +114,51 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(146, 384);
+            this.button1.Location = new System.Drawing.Point(146, 392);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(403, 41);
+            this.button1.Size = new System.Drawing.Size(403, 47);
             this.button1.TabIndex = 12;
             this.button1.Text = "Национальная кухня Беларуси";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(155, 248);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(383, 50);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Мои рецепты(добавление)";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(203, 319);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(286, 50);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Калорийность";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Windowsposleavrizacii
             // 
@@ -127,12 +166,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(683, 520);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPoisk);
             this.Controls.Add(this.enterlogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Windowsposleavrizacii";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Windowsposleavrizacii";
@@ -150,5 +192,7 @@
         private System.Windows.Forms.Button enterlogin;
         private System.Windows.Forms.Button buttonPoisk;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

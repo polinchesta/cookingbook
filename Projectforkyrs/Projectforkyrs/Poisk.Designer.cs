@@ -207,9 +207,9 @@
             // 
             this.pictureBoxUser.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUser.Image")));
-            this.pictureBoxUser.Location = new System.Drawing.Point(28, 144);
+            this.pictureBoxUser.Location = new System.Drawing.Point(52, 144);
             this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(295, 200);
+            this.pictureBoxUser.Size = new System.Drawing.Size(262, 200);
             this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxUser.TabIndex = 46;
             this.pictureBoxUser.TabStop = false;
@@ -218,7 +218,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Garamond", 17F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(399, 28);
+            this.textBox1.Location = new System.Drawing.Point(406, 27);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(351, 39);
             this.textBox1.TabIndex = 48;
@@ -232,8 +232,7 @@
             "Обед ",
             "Ужин",
             "Ланч",
-            "Полдник",
-            "Закуска"});
+            "Полдник"});
             this.comboBoxVybor.Location = new System.Drawing.Point(52, 86);
             this.comboBoxVybor.Name = "comboBoxVybor";
             this.comboBoxVybor.Size = new System.Drawing.Size(238, 39);
@@ -338,9 +337,12 @@
             this.Controls.Add(this.recept);
             this.Controls.Add(this.recept1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Poisk";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Poisk";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Poisk_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Poisk_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

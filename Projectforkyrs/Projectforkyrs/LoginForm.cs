@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using Projectforkyrs.Exceptions;
+using Projectforkyrs.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,16 +15,21 @@ namespace Projectforkyrs
 {
     public partial class LoginForm : Form
     {
+        private User _currentUser;
         public LoginForm()
         {
+
             InitializeComponent();
 
             LoginBox.Text = "Введите логин";
             LoginBox.ForeColor = Color.Gray;
             this.maskedpassword.AutoSize = false;
-            this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 64);
+            this.maskedpassword.Size = new Size(this.maskedpassword.Size.Width, 65);
         }
-
+        public LoginForm(User currentUser) : this()
+        {
+            _currentUser = currentUser;
+        }
 
         private void enterlogin_Click(object sender, EventArgs e)
         {
@@ -35,31 +42,43 @@ namespace Projectforkyrs
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM `customers` WHERE login = '{loginUser}' AND password = '{passUser}'", db.getConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
+            
+            User currentUser = default;
+            try
             {
-                if (table.Rows[0][1].ToString() == loginUser)
+                using (var connection = db.getConnection())
                 {
-                    if (table.Rows[0][2].ToString() == passUser)
+                    connection.Open();
+                    using (MySqlCommand command = new MySqlCommand($"SELECT * FROM `customers` WHERE login = '{loginUser}' AND password = '{passUser}'", connection))
                     {
-                        this.Hide();
-                        Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii();
-                        windowsposleavrizacii.Show();
-                    }
-                    else
-                        MessageBox.Show("Такого аккаунта нет");
-                }
-                else
-                    MessageBox.Show("Такого аккаунта нет");
-            }
-            else
-                MessageBox.Show("Такого аккаунта нет");
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (!reader.HasRows)
+                            {
+                                throw new UserException("Такого пользователя не существует");
+                            }
+                            while (reader.Read())
+                            {
+                                currentUser = new User()
+                                {
+                                    Id = reader.GetInt32("id"),
+                                };
+                            }
+                        }
 
+                    }
+                }
+                this.Hide();
+                Windowsposleavrizacii windowsposleavrizacii = new Windowsposleavrizacii(currentUser);
+                windowsposleavrizacii.Show();
+            }
+            catch(UserException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+               
+                      
+                   
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -123,5 +142,6 @@ namespace Projectforkyrs
                 LoginBox.ForeColor = Color.Gray;
             }
         }
+
     }
 }

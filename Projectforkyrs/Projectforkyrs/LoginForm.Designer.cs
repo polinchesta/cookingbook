@@ -45,13 +45,14 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Garamond", 40F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(125, 24);
+            this.label1.Location = new System.Drawing.Point(123, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(473, 89);
+            this.label1.Size = new System.Drawing.Size(423, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -60,10 +61,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 159);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 126);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -71,11 +72,11 @@
             // LoginBox
             // 
             this.LoginBox.Font = new System.Drawing.Font("Times New Roman", 22.2F);
-            this.LoginBox.Location = new System.Drawing.Point(177, 159);
+            this.LoginBox.Location = new System.Drawing.Point(178, 126);
             this.LoginBox.Margin = new System.Windows.Forms.Padding(4);
             this.LoginBox.Multiline = true;
             this.LoginBox.Name = "LoginBox";
-            this.LoginBox.Size = new System.Drawing.Size(368, 78);
+            this.LoginBox.Size = new System.Drawing.Size(395, 81);
             this.LoginBox.TabIndex = 3;
             this.LoginBox.Enter += new System.EventHandler(this.LoginBox_Enter);
             this.LoginBox.Leave += new System.EventHandler(this.LoginBox_Leave);
@@ -84,10 +85,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(51, 298);
+            this.pictureBox2.Location = new System.Drawing.Point(61, 268);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 79);
+            this.pictureBox2.Size = new System.Drawing.Size(87, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -100,11 +101,11 @@
             this.enterlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enterlogin.Font = new System.Drawing.Font("Garamond", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.enterlogin.Location = new System.Drawing.Point(187, 418);
+            this.enterlogin.Font = new System.Drawing.Font("Garamond", 25F, System.Drawing.FontStyle.Bold);
+            this.enterlogin.Location = new System.Drawing.Point(211, 375);
             this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
             this.enterlogin.Name = "enterlogin";
-            this.enterlogin.Size = new System.Drawing.Size(235, 49);
+            this.enterlogin.Size = new System.Drawing.Size(250, 59);
             this.enterlogin.TabIndex = 6;
             this.enterlogin.Text = "Войти";
             this.enterlogin.UseVisualStyleBackColor = false;
@@ -116,7 +117,7 @@
             this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Close.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Close.Location = new System.Drawing.Point(680, 9);
+            this.Close.Location = new System.Drawing.Point(617, 9);
             this.Close.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(26, 28);
@@ -132,7 +133,7 @@
             this.avtorlabel.BackColor = System.Drawing.Color.Transparent;
             this.avtorlabel.Font = new System.Drawing.Font("Century Schoolbook", 14F, System.Drawing.FontStyle.Bold);
             this.avtorlabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.avtorlabel.Location = new System.Drawing.Point(172, 471);
+            this.avtorlabel.Location = new System.Drawing.Point(206, 438);
             this.avtorlabel.Name = "avtorlabel";
             this.avtorlabel.Size = new System.Drawing.Size(255, 30);
             this.avtorlabel.TabIndex = 8;
@@ -142,9 +143,9 @@
             // maskedpassword
             // 
             this.maskedpassword.Font = new System.Drawing.Font("Times New Roman", 22.2F);
-            this.maskedpassword.Location = new System.Drawing.Point(177, 298);
+            this.maskedpassword.Location = new System.Drawing.Point(178, 268);
             this.maskedpassword.Name = "maskedpassword";
-            this.maskedpassword.Size = new System.Drawing.Size(368, 50);
+            this.maskedpassword.Size = new System.Drawing.Size(395, 50);
             this.maskedpassword.TabIndex = 22;
             this.maskedpassword.UseSystemPasswordChar = true;
             this.maskedpassword.ValidatingType = typeof(int);
@@ -153,11 +154,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(172, 266);
+            this.label2.Location = new System.Drawing.Point(171, 227);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 29);
+            this.label2.Size = new System.Drawing.Size(256, 38);
             this.label2.TabIndex = 23;
             this.label2.Text = "Введите пароль";
             // 
@@ -166,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(719, 571);
+            this.ClientSize = new System.Drawing.Size(656, 487);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.maskedpassword);
             this.Controls.Add(this.avtorlabel);
@@ -177,6 +178,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

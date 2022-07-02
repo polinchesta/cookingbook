@@ -57,11 +57,20 @@
       <DependentUpon>BelarusKuxnya.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
+    <Compile Include="Exceptions\UserException.cs" />
     <Compile Include="GlavnayaForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlavnayaForma.Designer.cs">
       <DependentUpon>GlavnayaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MoveImage.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Receptypolz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptypolz.Designer.cs">
+      <DependentUpon>Receptypolz.cs</DependentUpon>
     </Compile>
     <Compile Include="Lanch.cs">
       <SubType>Form</SubType>
@@ -87,11 +96,11 @@
     <Compile Include="Poisk.Designer.cs">
       <DependentUpon>Poisk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Polidnik.cs">
+    <Compile Include="Poldnik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Polidnik.Designer.cs">
-      <DependentUpon>Polidnik.cs</DependentUpon>
+    <Compile Include="Poldnik.Designer.cs">
+      <DependentUpon>Poldnik.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +128,12 @@
     <Compile Include="Uzin.Designer.cs">
       <DependentUpon>Uzin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VyborKalor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VyborKalor.Designer.cs">
+      <DependentUpon>VyborKalor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windowsposleavrizacii.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +158,9 @@
     <EmbeddedResource Include="GlavnayaForma.resx">
       <DependentUpon>GlavnayaForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Receptypolz.resx">
+      <DependentUpon>Receptypolz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lanch.resx">
       <DependentUpon>Lanch.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,8 +173,8 @@
     <EmbeddedResource Include="Poisk.resx">
       <DependentUpon>Poisk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Polidnik.resx">
-      <DependentUpon>Polidnik.cs</DependentUpon>
+    <EmbeddedResource Include="Poldnik.resx">
+      <DependentUpon>Poldnik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uzin.resx">
       <DependentUpon>Uzin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VyborKalor.resx">
+      <DependentUpon>VyborKalor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windowsposleavrizacii.resx">
       <DependentUpon>Windowsposleavrizacii.cs</DependentUpon>

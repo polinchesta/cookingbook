@@ -75,6 +75,7 @@
             this.buttonProsmotr.TabIndex = 54;
             this.buttonProsmotr.Text = "Просмотр видео-рецепта";
             this.buttonProsmotr.UseVisualStyleBackColor = false;
+            this.buttonProsmotr.Click += new System.EventHandler(this.buttonProsmotr_Click);
             // 
             // enterlogin
             // 
@@ -289,9 +290,9 @@
             // 
             this.bludo6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo6.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo6.Location = new System.Drawing.Point(10, 412);
+            this.bludo6.Location = new System.Drawing.Point(0, 412);
             this.bludo6.Name = "bludo6";
-            this.bludo6.Size = new System.Drawing.Size(148, 60);
+            this.bludo6.Size = new System.Drawing.Size(158, 60);
             this.bludo6.TabIndex = 19;
             this.bludo6.Text = "Мороженое";
             this.bludo6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,6 +423,7 @@
             this.Controls.Add(this.uzin_recept1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Uzin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uzin";

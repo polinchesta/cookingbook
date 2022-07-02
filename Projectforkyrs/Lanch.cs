@@ -49,13 +49,13 @@ namespace Projectforkyrs
 
             db.openConnection();
 
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM `recept_obed` WHERE `recept_obed`.`nazvanie` = '{name}'", db.getConnection());
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `recept_lanch` WHERE `recept_lanch`.`nazvanie` = '{name}'", db.getConnection());
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                obed1.Text = reader[1].ToString();
-                obed_sostav1.Text = reader[2].ToString();
-                obed_recept1.Text = reader[3].ToString();
+                lanch1.Text = reader[1].ToString();
+                lanch_sostav1.Text = reader[2].ToString();
+                lanch_recept1.Text = reader[3].ToString();
                 kalor.Text = reader[4].ToString();
                 belki_n.Text = reader[5].ToString();
                 ziry_n.Text = reader[6].ToString();
@@ -68,9 +68,9 @@ namespace Projectforkyrs
 
         private void bludo1_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -86,11 +86,11 @@ namespace Projectforkyrs
             GetName(bludo1.Text);
         }
 
-        private void Obed_Load(object sender, EventArgs e)
+        private void Lanch_Load(object sender, EventArgs e)
         {
-            obed1.Visible = false;
-            obed_sostav1.Visible = false;
-            obed_recept1.Visible = false;
+            lanch1.Visible = false;
+            lanch_sostav1.Visible = false;
+            lanch_recept1.Visible = false;
             PictureBoxImage.Visible = false;
             ingred.Visible = false;
             energ.Visible = false;
@@ -122,9 +122,9 @@ namespace Projectforkyrs
 
         private void bludo2_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -142,9 +142,9 @@ namespace Projectforkyrs
 
         private void bludo4_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -162,9 +162,9 @@ namespace Projectforkyrs
 
         private void bludo3_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -182,9 +182,9 @@ namespace Projectforkyrs
 
         private void bludo5_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -202,9 +202,9 @@ namespace Projectforkyrs
 
         private void bludo6_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -222,9 +222,9 @@ namespace Projectforkyrs
 
         private void bludo7_Click(object sender, EventArgs e)
         {
-            obed1.Visible = true;
-            obed_sostav1.Visible = true;
-            obed_recept1.Visible = true;
+            lanch1.Visible = true;
+            lanch_sostav1.Visible = true;
+            lanch_recept1.Visible = true;
             PictureBoxImage.Visible = true;
             ingred.Visible = true;
             energ.Visible = true;
@@ -241,7 +241,7 @@ namespace Projectforkyrs
         }
 
         Point lastPoint;
-        private void Obed_MouseMove(object sender, MouseEventArgs e)
+        private void Lanch_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -250,12 +250,12 @@ namespace Projectforkyrs
             }
         }
 
-        private void Obed_MouseDown(object sender, MouseEventArgs e)
+        private void Lanch_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void enterlogin_Click(object sender, EventArgs e)
+        private void nazad_Click(object sender, EventArgs e)
         {
             this.Hide();
             recept recept = new recept();
@@ -274,10 +274,11 @@ namespace Projectforkyrs
             label.ForeColor = Color.DarkBlue;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonProsmotr_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\Полина\Desktop\cookingbook-main\Projectforkyrs\Projectforkyrs\Resources\Video\" + obed1.Text + ".mp4";
+            string path = @"C:\Users\Полина\Desktop\cookingbook-main\Projectforkyrs\Projectforkyrs\Resources\Video\" + lanch1.Text + ".mp4";
             Process.Start(path);
         }
+
     }
 }

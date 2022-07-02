@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lanch));
             this.buttonProsmotr = new System.Windows.Forms.Button();
-            this.enterlogin = new System.Windows.Forms.Button();
+            this.nazad = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Label();
             this.uglevody_n = new System.Windows.Forms.Label();
             this.ziry_n = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.recept = new System.Windows.Forms.Label();
             this.ingred = new System.Windows.Forms.Label();
             this.PictureBoxImage = new System.Windows.Forms.PictureBox();
-            this.obed_sostav1 = new System.Windows.Forms.Label();
-            this.obed1 = new System.Windows.Forms.Label();
+            this.lanch_sostav1 = new System.Windows.Forms.Label();
+            this.lanch1 = new System.Windows.Forms.Label();
             this.bludo7 = new System.Windows.Forms.Label();
             this.bludo6 = new System.Windows.Forms.Label();
             this.bludo5 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.bludo2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bludo1 = new System.Windows.Forms.Label();
-            this.obed_recept1 = new System.Windows.Forms.Label();
+            this.lanch_recept1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
@@ -75,23 +75,25 @@
             this.buttonProsmotr.TabIndex = 54;
             this.buttonProsmotr.Text = "Просмотр видео-рецепта";
             this.buttonProsmotr.UseVisualStyleBackColor = false;
+            this.buttonProsmotr.Click += new System.EventHandler(this.buttonProsmotr_Click);
             // 
-            // enterlogin
+            // nazad
             // 
-            this.enterlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.enterlogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.enterlogin.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.enterlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.enterlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.enterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enterlogin.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
-            this.enterlogin.Location = new System.Drawing.Point(772, 790);
-            this.enterlogin.Margin = new System.Windows.Forms.Padding(4);
-            this.enterlogin.Name = "enterlogin";
-            this.enterlogin.Size = new System.Drawing.Size(131, 41);
-            this.enterlogin.TabIndex = 53;
-            this.enterlogin.Text = "Назад";
-            this.enterlogin.UseVisualStyleBackColor = false;
+            this.nazad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nazad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nazad.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.nazad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nazad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.nazad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nazad.Font = new System.Drawing.Font("Garamond", 15F, System.Drawing.FontStyle.Bold);
+            this.nazad.Location = new System.Drawing.Point(772, 790);
+            this.nazad.Margin = new System.Windows.Forms.Padding(4);
+            this.nazad.Name = "nazad";
+            this.nazad.Size = new System.Drawing.Size(131, 41);
+            this.nazad.TabIndex = 53;
+            this.nazad.Text = "Назад";
+            this.nazad.UseVisualStyleBackColor = false;
+            this.nazad.Click += new System.EventHandler(this.nazad_Click);
             // 
             // Close
             // 
@@ -105,6 +107,9 @@
             this.Close.Size = new System.Drawing.Size(26, 28);
             this.Close.TabIndex = 52;
             this.Close.Text = "X";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
+            this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
             // 
             // uglevody_n
             // 
@@ -245,95 +250,101 @@
             this.PictureBoxImage.TabStop = false;
             this.PictureBoxImage.Visible = false;
             // 
-            // obed_sostav1
+            // lanch_sostav1
             // 
-            this.obed_sostav1.AutoSize = true;
-            this.obed_sostav1.BackColor = System.Drawing.Color.Transparent;
-            this.obed_sostav1.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold);
-            this.obed_sostav1.Location = new System.Drawing.Point(468, 77);
-            this.obed_sostav1.Name = "obed_sostav1";
-            this.obed_sostav1.Size = new System.Drawing.Size(120, 22);
-            this.obed_sostav1.TabIndex = 39;
-            this.obed_sostav1.Text = "obed_sostav1";
-            this.obed_sostav1.Visible = false;
+            this.lanch_sostav1.AutoSize = true;
+            this.lanch_sostav1.BackColor = System.Drawing.Color.Transparent;
+            this.lanch_sostav1.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold);
+            this.lanch_sostav1.Location = new System.Drawing.Point(468, 77);
+            this.lanch_sostav1.Name = "lanch_sostav1";
+            this.lanch_sostav1.Size = new System.Drawing.Size(120, 22);
+            this.lanch_sostav1.TabIndex = 39;
+            this.lanch_sostav1.Text = "obed_sostav1";
+            this.lanch_sostav1.Visible = false;
             // 
-            // obed1
+            // lanch1
             // 
-            this.obed1.AutoSize = true;
-            this.obed1.BackColor = System.Drawing.Color.Transparent;
-            this.obed1.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Bold);
-            this.obed1.Location = new System.Drawing.Point(358, 3);
-            this.obed1.Name = "obed1";
-            this.obed1.Size = new System.Drawing.Size(102, 38);
-            this.obed1.TabIndex = 38;
-            this.obed1.Text = "obed1";
-            this.obed1.Visible = false;
+            this.lanch1.AutoSize = true;
+            this.lanch1.BackColor = System.Drawing.Color.Transparent;
+            this.lanch1.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Bold);
+            this.lanch1.Location = new System.Drawing.Point(358, 3);
+            this.lanch1.Name = "lanch1";
+            this.lanch1.Size = new System.Drawing.Size(102, 38);
+            this.lanch1.TabIndex = 38;
+            this.lanch1.Text = "obed1";
+            this.lanch1.Visible = false;
             // 
             // bludo7
             // 
             this.bludo7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo7.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo7.Location = new System.Drawing.Point(0, 488);
+            this.bludo7.Location = new System.Drawing.Point(1, 445);
             this.bludo7.Name = "bludo7";
-            this.bludo7.Size = new System.Drawing.Size(157, 60);
+            this.bludo7.Size = new System.Drawing.Size(157, 41);
             this.bludo7.TabIndex = 20;
-            this.bludo7.Text = "Картошка с курицей";
+            this.bludo7.Text = "Квас";
             this.bludo7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo7.Click += new System.EventHandler(this.bludo7_Click);
             // 
             // bludo6
             // 
             this.bludo6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo6.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo6.Location = new System.Drawing.Point(0, 428);
+            this.bludo6.Location = new System.Drawing.Point(3, 385);
             this.bludo6.Name = "bludo6";
             this.bludo6.Size = new System.Drawing.Size(148, 60);
             this.bludo6.TabIndex = 19;
-            this.bludo6.Text = "Жаркое";
+            this.bludo6.Text = "Бананы в глазури";
             this.bludo6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo6.Click += new System.EventHandler(this.bludo6_Click);
             // 
             // bludo5
             // 
             this.bludo5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo5.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo5.Location = new System.Drawing.Point(3, 368);
+            this.bludo5.Location = new System.Drawing.Point(1, 334);
             this.bludo5.Name = "bludo5";
-            this.bludo5.Size = new System.Drawing.Size(155, 60);
+            this.bludo5.Size = new System.Drawing.Size(155, 40);
             this.bludo5.TabIndex = 18;
-            this.bludo5.Text = "Картофель запеченный";
+            this.bludo5.Text = "Гуакамоле";
             this.bludo5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo5.Click += new System.EventHandler(this.bludo5_Click);
             // 
             // bludo4
             // 
             this.bludo4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo4.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
-            this.bludo4.Location = new System.Drawing.Point(0, 295);
+            this.bludo4.Location = new System.Drawing.Point(9, 288);
             this.bludo4.Name = "bludo4";
-            this.bludo4.Size = new System.Drawing.Size(148, 60);
+            this.bludo4.Size = new System.Drawing.Size(148, 46);
             this.bludo4.TabIndex = 17;
-            this.bludo4.Text = "Куриные рулетики";
+            this.bludo4.Text = "Смузи";
             this.bludo4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo4.Click += new System.EventHandler(this.bludo4_Click);
             // 
             // bludo3
             // 
             this.bludo3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo3.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
-            this.bludo3.Location = new System.Drawing.Point(10, 218);
+            this.bludo3.Location = new System.Drawing.Point(14, 226);
             this.bludo3.Name = "bludo3";
             this.bludo3.Size = new System.Drawing.Size(137, 62);
             this.bludo3.TabIndex = 16;
-            this.bludo3.Text = "Сырный суп";
+            this.bludo3.Text = "Печёные яблоки";
             this.bludo3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo3.Click += new System.EventHandler(this.bludo3_Click);
             // 
             // bludo2
             // 
             this.bludo2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bludo2.Font = new System.Drawing.Font("Garamond", 13.5F, System.Drawing.FontStyle.Bold);
-            this.bludo2.Location = new System.Drawing.Point(0, 123);
+            this.bludo2.Location = new System.Drawing.Point(0, 177);
             this.bludo2.Name = "bludo2";
-            this.bludo2.Size = new System.Drawing.Size(158, 95);
+            this.bludo2.Size = new System.Drawing.Size(158, 31);
             this.bludo2.TabIndex = 15;
-            this.bludo2.Text = "Суп Плавленый сыр";
+            this.bludo2.Text = "Тосты";
             this.bludo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo2.Click += new System.EventHandler(this.bludo2_Click);
             // 
             // label1
             // 
@@ -349,26 +360,27 @@
             // 
             // bludo1
             // 
-            this.bludo1.AutoSize = true;
             this.bludo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bludo1.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Bold);
-            this.bludo1.Location = new System.Drawing.Point(33, 93);
+            this.bludo1.Font = new System.Drawing.Font("Garamond", 14F, System.Drawing.FontStyle.Bold);
+            this.bludo1.Location = new System.Drawing.Point(9, 93);
             this.bludo1.Name = "bludo1";
-            this.bludo1.Size = new System.Drawing.Size(83, 30);
+            this.bludo1.Size = new System.Drawing.Size(146, 70);
             this.bludo1.TabIndex = 0;
-            this.bludo1.Text = "Борщ";
+            this.bludo1.Text = "Горячие бутерброды";
+            this.bludo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bludo1.Click += new System.EventHandler(this.bludo1_Click);
             // 
-            // obed_recept1
+            // lanch_recept1
             // 
-            this.obed_recept1.AutoSize = true;
-            this.obed_recept1.BackColor = System.Drawing.Color.Transparent;
-            this.obed_recept1.Font = new System.Drawing.Font("Garamond", 12.5F, System.Drawing.FontStyle.Bold);
-            this.obed_recept1.Location = new System.Drawing.Point(169, 310);
-            this.obed_recept1.Name = "obed_recept1";
-            this.obed_recept1.Size = new System.Drawing.Size(130, 24);
-            this.obed_recept1.TabIndex = 40;
-            this.obed_recept1.Text = "obed_recept1";
-            this.obed_recept1.Visible = false;
+            this.lanch_recept1.AutoSize = true;
+            this.lanch_recept1.BackColor = System.Drawing.Color.Transparent;
+            this.lanch_recept1.Font = new System.Drawing.Font("Garamond", 12.5F, System.Drawing.FontStyle.Bold);
+            this.lanch_recept1.Location = new System.Drawing.Point(169, 310);
+            this.lanch_recept1.Name = "lanch_recept1";
+            this.lanch_recept1.Size = new System.Drawing.Size(130, 24);
+            this.lanch_recept1.TabIndex = 40;
+            this.lanch_recept1.Text = "obed_recept1";
+            this.lanch_recept1.Visible = false;
             // 
             // panel1
             // 
@@ -393,7 +405,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(929, 862);
             this.Controls.Add(this.buttonProsmotr);
-            this.Controls.Add(this.enterlogin);
+            this.Controls.Add(this.nazad);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.uglevody_n);
             this.Controls.Add(this.ziry_n);
@@ -406,17 +418,20 @@
             this.Controls.Add(this.recept);
             this.Controls.Add(this.ingred);
             this.Controls.Add(this.PictureBoxImage);
-            this.Controls.Add(this.obed_sostav1);
-            this.Controls.Add(this.obed1);
-            this.Controls.Add(this.obed_recept1);
+            this.Controls.Add(this.lanch_sostav1);
+            this.Controls.Add(this.lanch1);
+            this.Controls.Add(this.lanch_recept1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lanch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lanch";
+            this.Load += new System.EventHandler(this.Lanch_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Lanch_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Lanch_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +440,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonProsmotr;
-        private System.Windows.Forms.Button enterlogin;
+        private System.Windows.Forms.Button nazad;
         private System.Windows.Forms.Label Close;
         private System.Windows.Forms.Label uglevody_n;
         private System.Windows.Forms.Label ziry_n;
@@ -438,8 +453,8 @@
         private System.Windows.Forms.Label recept;
         private System.Windows.Forms.Label ingred;
         private System.Windows.Forms.PictureBox PictureBoxImage;
-        private System.Windows.Forms.Label obed_sostav1;
-        private System.Windows.Forms.Label obed1;
+        private System.Windows.Forms.Label lanch_sostav1;
+        private System.Windows.Forms.Label lanch1;
         private System.Windows.Forms.Label bludo7;
         private System.Windows.Forms.Label bludo6;
         private System.Windows.Forms.Label bludo5;
@@ -448,7 +463,7 @@
         private System.Windows.Forms.Label bludo2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label bludo1;
-        private System.Windows.Forms.Label obed_recept1;
+        private System.Windows.Forms.Label lanch_recept1;
         private System.Windows.Forms.Panel panel1;
     }
 }

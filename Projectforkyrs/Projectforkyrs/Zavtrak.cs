@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projectforkyrs.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Projectforkyrs
 {
     public partial class Zavtrak : Form
     {
+        private User _currentUser;
         private string path = string.Empty;
         public Zavtrak()
         {
@@ -21,6 +23,10 @@ namespace Projectforkyrs
             Subscribe();
         }
 
+        public Zavtrak(User currentUser) : this()
+        {
+            _currentUser = currentUser;
+        }
         private void Subscribe()
         {
             bludo1.MouseEnter += bludo_MouseEnter;
@@ -56,11 +62,15 @@ namespace Projectforkyrs
             belki.Visible = true;
             belki_n.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo1.Text);
         }
 
         private void Zavtrak_Load(object sender, EventArgs e)
         {
+            label2.Visible = true;
+            label3.Visible = true;
             zavtrak1.Visible = false;
             zavtrak_sostav1.Visible = false;
             zavtrak_recept1.Visible = false;
@@ -120,6 +130,8 @@ namespace Projectforkyrs
             belki_n.Visible = true;
             PictureBoxImage.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo2.Text);
         }
 
@@ -140,6 +152,8 @@ namespace Projectforkyrs
             ingred.Visible = true;
             PictureBoxImage.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo3.Text);
         }
 
@@ -160,6 +174,8 @@ namespace Projectforkyrs
             belki_n.Visible = true;
             PictureBoxImage.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo4.Text);
         }
 
@@ -196,6 +212,8 @@ namespace Projectforkyrs
             belki_n.Visible = true;
             PictureBoxImage.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo5.Text);
         }
 
@@ -216,13 +234,15 @@ namespace Projectforkyrs
             belki_n.Visible = true;
             PictureBoxImage.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo6.Text);
         }
 
         private void enterlogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            recept recept = new recept();
+            recept recept = new recept(_currentUser);
             recept.Show();
         }
 
@@ -243,6 +263,8 @@ namespace Projectforkyrs
             belki_n.Visible = true;
             PictureBoxImage.Visible = true;
             buttonProsmotr.Visible = true;
+            label2.Visible = false;
+            label3.Visible = false;
             GetName(bludo7.Text);
         }
 
@@ -277,6 +299,17 @@ namespace Projectforkyrs
         {
             string path = @"C:\Users\Полина\Desktop\cookingbook-main\Projectforkyrs\Projectforkyrs\Resources\Video\" + zavtrak1.Text + ".mp4";
             Process.Start(path);
+        }
+
+        private void  pictureBox3_Click(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("ALTER TABLE `recept_zavtrak` CHANGE `ponrav` `ponrav` TINYINT(1) NOT NULL;", db.getConnection());
+
+
+            command.Parameters.Add("@ponrav", MySqlDbType.VarChar).Value = pictureBox3.Text;
+
+            db.openConnection();
         }
     }
 }
